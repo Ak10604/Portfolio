@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ayush Kaushik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <canvas id="particles"></canvas>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="text-decoration: none;"><span class="brand-text">&lt;AK/&gt;</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="research.html">Research</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Redesigned About Hero: Image left, intro + stats right -->
+    <section class="about-hero-redesign">
+        <div class="container">
+            <div class="about-main-grid">
+                <!-- Left: Image -->
+                <div class="about-image-side">
+                    <div class="about-image-wrapper">
+                        <img src="/Ak-dark.png" alt="Ayush Kaushik" class="about-profile-img theme-image" data-light="/Ak-light.png" data-dark="/Ak-dark.png">
+                        <div class="about-image-glow"></div>
+                    </div>
+                </div>
+                
+                <!-- Right: Intro + Stats -->
+                <div class="about-text-side">
+                    <h1 class="about-name">Ayush Kaushik</h1>
+                    <p class="about-role">AI Engineer · ML Developer · Security Enthusiast</p>
+                    <p class="about-description">
+                        I’m Ayush Kaushik, an AI/ML and cybersecurity-focused developer from LPU, Jalandhar.
+                        I build intelligent, real-world systems across AI automation, real-time backend engineering, bot development, and machine learning.
+                        My work blends advanced AI with security to create fast, autonomous, and reliable technology — including my Autonomous Laptop Security System, designed for practical, high-impact use.
+                    </p>
+                    
+                    <!-- Stats under intro -->
+                    <div class="about-stats-row">
+                        <div class="about-stat-item">
+                            <span class="about-stat-num">30+</span>
+                            <span class="about-stat-label">AI/Security Tools</span>
+                        </div>
+                        <div class="about-stat-item">
+                            <span class="about-stat-num">15+</span>
+                            <span class="about-stat-label">Hackathons</span>
+                        </div>
+                            <div class="about-stat-item">
+                            <span class="about-stat-num">10k+</span>
+                            <span class="about-stat-label">Lines of code</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Quote (Book Style) -->
+    <section class="section compact-section">
+        <div class="container">
+            <div class="book-quote">
+                <div class="book-quote-mark">"</div>
+                <blockquote>
+                    I believe technology should think, protect, and evolve.
+                    AI gives systems the power to act; security gives them the strength to survive.
+                    My work lives where both meet — building real-world tools that automate, defend, and actually matter.
+                    Cool projects aren't just for show; they're how ideas become systems, and systems become smarter.
+                    I don't just code features — I engineer intelligence with resilience.
+                </blockquote>
+                <cite>— My Philosophy</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two column: Journey left, Tech Stack right with proper CSS -->
+    <section class="section">
+        <div class="container">
+            <div class="journey-tech-row">
+                <!-- Journey Column -->
+                <div class="journey-column">
+                    <h3 class="column-title">Journey</h3>
+                    <div class="journey-list">
+                        <div class="journey-entry">
+                            <span class="journey-year">2024</span>
+                            <div class="journey-details">
+                                <h4>B.Tech CSE (AI/ML Engineer)</h4>
+                                <p>LPU University </p>
+                            </div>
+                        </div>
+                        <div class="journey-entry">
+                            <span class="journey-year">2024</span>
+                            <div class="journey-details">
+                                <h4>Applied AI/ML Development</h4>
+                                <p>Built intelligent systems & ML-based applications</p>
+                            </div>
+                        </div>
+                        <div class="journey-entry">
+                            <span class="journey-year">2025</span>
+                            <div class="journey-details">
+                                <h4>Built a Full-Stack AI System</h4>
+                                <p>Real-time monitoring, alerts & automation</p>
+                            </div>
+                        </div>
+                        <div class="journey-entry">
+                            <span class="journey-year">2025</span>
+                            <div class="journey-details">
+                                <h4>Advanced Python Engineering</h4>
+                                <p>Automation, threading & system-level scripting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Column -->
+                <div class="tech-column">
+                    <h3 class="column-title">Tech Stack</h3>
+                    <div class="tech-stack-list">
+                        <div class="tech-row">
+                            <span class="tech-label">Languages</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag highlight">Python</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="tech-row">
+                            <span class="tech-label">AI/ML</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag highlight">Machine Learning</span>
+                                <span class="tech-tag highlight">NLP</span>
+                                <span class="tech-tag highlight">Face Recognition</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+                        </div>
+                        <div class="tech-row">
+                            <span class="tech-label">Frameworks</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag highlight">Flask</span>
+                                <span class="tech-tag highlight">OpenCV</span>
+                                <span class="tech-tag">MediaPipe</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Github</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" style="text-decoration: none;"><span class="brand-text">&lt;AK/&gt;</span></a>
+                    <p>Building intelligent systems that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Ak10604" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ayush-kaushik10604" target="_blank">LinkedIn</a>
+                    <a href="mailto:sunny14kaushik7@gmail.com">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ayush Kaushik. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

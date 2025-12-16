@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Ayush Kaushik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <canvas id="particles"></canvas>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="text-decoration: none;"><span class="brand-text">&lt;AK/&gt;</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="research.html">Research</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Compact research page -->
+    <section class="section page-header">
+        <div class="container">
+            <h1 class="page-title">
+                <span class="title-decorator">&lt;</span>
+                Security Research
+                <span class="title-decorator">/&gt;</span>
+            </h1>
+            <p class="page-subtitle">Ethical security research and responsible disclosure</p>
+        </div>
+    </section>
+
+    <section class="section compact-section">
+        <div class="container">
+            <div class="research-commitment">
+                <div class="commitment-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <div class="commitment-text">
+                    <h2>Every tool I build focuses on security excellence.</h2>
+                    <p>All security research is conducted ethically and within legal boundaries. Vulnerabilities are reported through proper channels to help organizations improve their security posture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Responsible Disclosure
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+
+            <div class="case-study-card">
+                <div class="case-study-header">
+                    <div class="case-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="case-meta">
+                    </div>
+                </div>
+                <h3>Authentication & Access Control Research</h3>
+                <p>
+                   Conducted independent security research focused on identifying common authentication and access-control weaknesses across web-based platforms. This research emphasizes ethical testing practices and responsible disclosure principles.
+                </p>
+                <div class="case-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-text">Analyzed authentication flows and session handling mechanisms</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-text">Identified potential authorization weaknesses through controlled testing</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-text">Prepared private technical documentation for responsible disclosure</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-text">Followed coordinated disclosure practices with affected stakeholders</span>
+                    </div>
+                </div>
+                <div class="case-tags">
+                    <span>Responsible Disclosure</span>
+                    <span>Ethical Security</span>
+                    <span>Proof of Concept</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Research Focus
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+
+            <div class="research-focus-grid">
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Authentication</h3>
+                    <p>Login flows, session management, access control</p>
+                </div>
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+<h3>Cryptography</h3>
+<p>Basic encryption concepts and secure data handling</p>
+
+                </div>
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Web Security</h3>
+                    <p>Input validation & secure forms</p>
+                </div>
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Endpoint Security</h3>
+                    <p>Intrusion detection, surveillance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" style="text-decoration: none;"><span class="brand-text">&lt;AK/&gt;</span></a>
+                    <p>Building intelligent systems that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Ak10604" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ayush-kaushik10604" target="_blank">LinkedIn</a>
+                    <a href="mailto:sunny14kaushik7@gmail.com">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ayush Kaushik. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

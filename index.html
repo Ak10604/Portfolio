@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kaushik | AI Engineer & Developer</title>
+    <meta name="description" content="Portfolio of Ayush Kaushik - AI Engineer, Developer, and Data Science Student specializing in intelligent systems and ethical security research.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <canvas id="particles"></canvas>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="text-decoration: none;"><span class="brand-text">&lt;AK/&gt;</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="research.html">Research</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper" id="hero-image">
+                    <img src="/Ak-light.png" alt="Ayush Kaushik - Light Mode" class="hero-img hero-img-light">
+                    <img src="/Ak-dark.png" alt="Ayush Kaushik - Dark Mode" class="hero-img hero-img-dark">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+            <div class="hero-text">
+                <p class="hero-subtitle">// Hello, World!</p>
+                <h1 class="hero-title">
+                    I'm <span class="glitch-text" data-text="Ayush Kaushik">Ayush Kaushik</span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-badge">AI Engineer</span>
+                    <span class="role-divider">|</span>
+                    <span class="role-badge">Developer</span>
+                    <span class="role-divider">|</span>
+                    <span class="role-badge">Security enthusiast</span>
+                </div>
+                <p class="hero-description">
+                    AI/ML developer and emerging cybersecurity enthusiast, building intelligent
+                    systems and practical tools that automate complex tasks. Driven to create
+                    real-world solutions that combine smart engineering with secure design.
+                </p>
+                <!-- Typing roles animation -->
+                <div class="hero-typing-roles">
+                    <span class="typing-prefix">></span> <span id="typing-roles"></span><span class="typing-cursor"></span>
+                </div>
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Ak10604" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-kaushik10604" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:sunny14kaushik7@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-down">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Quick About + Terminal side by side -->
+    <section class="section compact-section">
+        <div class="container">
+            <div class="quick-about-section">
+                <div class="quick-about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        A 19-year-old AI/ML Developer turning ideas into intelligent systems that bring real impact. 
+                        Currently pursuing B.Tech in Computer Science (Data Science) at GLA University. 
+                        I build practical AI solutions — not demos. My work merges AI, security automation, 
+                        and real-time systems.
+                    </p>
+                    <a href="about.html" class="btn btn-secondary">Learn More →</a>
+                </div>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn red"></span>
+                            <span class="terminal-btn yellow"></span>
+                            <span class="terminal-btn green"></span>
+                        </div>
+                        <span class="terminal-title">about_me.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="terminal-prompt">$</span> cat about_me.txt</p>
+                        <p class="terminal-output">Name: Ayush Kaushik</p>
+                        <p class="terminal-output">Role: AI Engineer & Developer</p>
+                        <p class="terminal-output">Focus: Intelligent Systems</p>
+                        <p class="terminal-output">Status: Building the future...</p>
+                        <p><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects directly with 3 of each type, reduced gaps -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Projects
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+
+            <!-- AI & Computer Vision -->
+            <div class="project-category-header">
+                <span class="category-tag">AI & Computer Vision</span>
+            </div>
+            <div class="projects-grid-compact">
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>FaceTrack Attendance</h3>
+                        <p>Face recognition attendance with ID mapping</p>
+                        <div class="mini-tags"><span>Python</span><span>OpenCV</span></div>
+                        <a href="https://github.com/Ak10604/FaceTrack-Smart-Attendance-System" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3>Human and object deetection and recognition</h3>
+                        <p>Human and object deetection and recognition via OpenCV and pre trained dataset </p>
+                        <div class="mini-tags"><span>Python</span><span>OpenCV</span></div>
+                        <a href="https://github.com/Ak10604/Human-and-Object-Detection-CV" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Virtual Hand Controlable cursor </h3>
+                        <p>Control cursor with just hand moments    </p>
+                        <div class="mini-tags"><span>Python</span><span>MediaPipe</span></div>
+                        <a href="https://github.com/Ak10604/Virtual-Hand-Control" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="project-category-header">
+                <span class="category-tag">Cybersecurity Tools</span>
+            </div>
+            <div class="projects-grid-compact">
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            </svg>
+                        </div>
+                        <h3>PassToKey PBKDF2 Based Key Generator</h3>
+                        <p>Python tool that derives cryptographic keys from passwords using PBKDF2 with HMAC-SHA256. </p>
+                        <div class="mini-tags"><span>Python</span><span>cryptography</span></div>
+                        <a href="https://github.com/Ak10604/PassToKey-PBKDF2-Based-Key-Generator" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3>Password Analyzer</h3>
+                        <p> Password Strength Checker</p>
+                        <div class="mini-tags"><span>Python</span><span>Security</span></div>
+                        <a href="https://github.com/Ak10604/Password-Strength-Checker" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3>Encrypt or decrypt files</h3>
+                        <p>tool to encrypt or decrypt files and folders using AES encryption with password protection. </p>
+                        <div class="mini-tags"><span>Python</span><span>BASE64</span></div>
+                        <a href="https://github.com/Ak10604/encrypt-decrypt-folder-tool" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- AI Assistants -->
+            <div class="project-category-header">
+                <span class="category-tag">AI Assistants & Bots</span>
+            </div>
+            <div class="projects-grid-compact">
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Dexa AI Assistant</h3>
+                        <p>An voice controlable customizable AI assistant for desktop usage </p>
+                        <div class="mini-tags"><span>Python</span><span>OpenCV</span></div>
+                        <a href="https://github.com/Ak10604/DexaAI-Desktop-Assistant" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Smart-Siksha — AI Personal Teacher</h3>
+                        <p>Automated chat responses</p>
+                        <div class="mini-tags"><span>Python</span><span>Flask</span></div>
+                        <a href="https://github.com/Ak10604/Smart-siksha_Ai-personal-teacher" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+                <article class="project-card-mini" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-icon-mini">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Tracktive AI Competitor Tracker</h3>
+                        <p>Track your Competition easily live and fast with detailed reports </p>
+                        <div class="mini-tags"><span>Python</span><span>Speech</span><span>Flask</span></div>
+                        <a href="https://github.com/Ak10604/-Tracktive-AI-Competitor-Tracker/tree/main" target="_blank" class="card-link-overlay"></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-more">
+                <a href="projects.html" class="btn btn-secondary">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements with Ak.png in each -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decorator">&lt;</span>
+                Achievements
+                <span class="title-decorator">/&gt;</span>
+            </h2>
+
+            <div class="achievements-showcase">
+                <div class="achievement-item" data-tilt>
+                    <div class="achievement-image-slot">
+                        <img src="/image.png" alt="Ayush Kaushik">
+                    </div>
+                    <div class="achievement-info">
+                        <span class="achievement-badge">2024</span>
+                        <h3>Hackathon Winner</h3>
+                        <p>College Hackathon winner</p>
+                    </div>
+                </div>
+                <div class="achievement-item" data-tilt>
+                    <div class="achievement-image-slot">
+                        <img src="/adobe.png" alt="Ayush Kaushik">
+                    </div>
+                    <div class="achievement-info">
+                        <span class="achievement-badge">2024</span>
+                        <h3>Adobe Hackathon</h3>
+                        <p>Adobe India Hackathon</p>
+                    </div>
+                </div>
+                <div class="achievement-item" data-tilt>
+                    <div class="achievement-image-slot">
+                        <img src="/image copy.png" alt="Ayush Kaushik">
+                    </div>
+                    <div class="achievement-info">
+                        <span class="achievement-badge">2024</span>
+                        <h3>National Hackathon Participant</h3>
+                        <p>HackaTone - IIT Delhi And more</p>
+                    </div>
+                </div>
+                <div class="achievement-item" data-tilt>
+                    <div class="achievement-image-slot">
+                        <img src="/image copy 2.png" alt="Ayush Kaushik">
+                    </div>
+                    <div class="achievement-info">
+                        <span class="achievement-badge">2023</span>
+                        <h3>Applied AI/ML Development</h3>
+                        <p>Intelligent system implementation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" style="text-decoration: none;"><span class="brand-text">&lt;AK/&gt;</span></a>
+                    <p>Building intelligent systems that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Ak10604" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ayush-kaushik10604" target="_blank">LinkedIn</a>
+                    <a href="mailto:sunny14kaushik7@gmail.com">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ayush Kaushik. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
